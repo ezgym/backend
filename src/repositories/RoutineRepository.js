@@ -7,10 +7,16 @@ class RoutinesRepository{
         return await Routines.create(data);
     }
     async getAll(){
-        return await Routines.find().populate('exercises');
+        return await Routines.find();
     }
     async getById(data){
-        return await Routines.findById(data).populate('exercises');
+        return await Routines.findById(data);
+    }
+    async getRecommended(){
+        return await Routines.find({isRecommended: true});
+    }
+    async search(name){
+        return await Routines.find({name: {$regex: name, $options: 'i'}});
     }
 
 }

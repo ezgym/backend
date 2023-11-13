@@ -8,7 +8,7 @@ class SubscriptionController{
         try{
             //console.log(req.body);
             await this.subscriptionRepository.create(req.body);
-            return res.status(201).send();
+            return res.status(201).json("done");
         }catch(error){
             return res.status(400).json({
                 message: error.message
@@ -39,7 +39,7 @@ class SubscriptionController{
     async deleteById(req, res){
         try{
             await this.subscriptionRepository.deleteById(req.params.id);
-            return res.status(200).send();
+            return res.status(200).json("done");
         }catch(error){
             return res.status(400).json({
                 message: error.message

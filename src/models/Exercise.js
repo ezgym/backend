@@ -11,8 +11,7 @@ const exerciseSchema = new mongoose.Schema({
     },
     reps: {
         type: Number,
-        required: [true, "The reps number is obligatory"],
-        unique: true
+        required: [true, "The reps number is obligatory"]
     },
     video: {
         type: String,

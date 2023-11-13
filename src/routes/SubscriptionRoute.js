@@ -14,7 +14,7 @@ router.get('/', async (req,res)=>{
 
 });
 
-router.get('/:id', async (req,res)=>{
+router.get('/id/:id', async (req,res)=>{
     await subscriptionController.getById(req,res);
 });
 

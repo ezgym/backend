@@ -11,8 +11,7 @@ const routineSchema = new mongoose.Schema({
     },
     lenght: {
         type: Number,
-        required: [true, "The lenght is obligatory"],
-        unique: true
+        required: [true, "The lenght is obligatory"]
     },
     type: {
         type: String,
@@ -21,7 +20,6 @@ const routineSchema = new mongoose.Schema({
     difficulty:{
         type: String,
         required: [true, "The difficulty is obligatory"],
-        unique: true
     },
     equipment:{
         type: Boolean,
@@ -35,10 +33,8 @@ const routineSchema = new mongoose.Schema({
         type: String,
         required: [true, "The image is obligatory"]
     },
-    exercise: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "exercises",
-        required: [true, "The exercises are obligatory"]
+    isRecommended: {
+        type: Boolean
     }
 });
 

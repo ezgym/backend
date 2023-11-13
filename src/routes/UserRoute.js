@@ -12,4 +12,8 @@ router.post('/login', async (req, res) => {
     await userController.loginUser(req,res)
 })
 
+router.get('/:id', async (req,res)=>{
+    await userController.getById(req,res);
+})
+
 export default router;
