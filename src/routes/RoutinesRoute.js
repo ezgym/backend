@@ -20,5 +20,8 @@ router.get("/recommended", async(req,res)=>{
 router.get("/search/:name",async(req,res)=>{
     await controller.search(req,res);
 })
+router.patch('/', async (req, res)=>{
+    await controller.patch(req,res);
+})
 
 export default router;

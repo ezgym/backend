@@ -11,7 +11,8 @@ class UserController{
         req.body.password = await bcrypt.hash(req.body.password, 10);
         const user = await this.userRepository.create(req.body);
         return res.status(201).json({
-            message: "User created successfully"
+            message: "User created successfully",
+            id: user._id
         });
         }catch(error){
             return res.status(500).json({

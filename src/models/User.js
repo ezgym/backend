@@ -21,7 +21,6 @@ const userSchema = new mongoose.Schema({
     phone:{
         type: String,
         required: [true, "The phone number is obligatory"],
-        unique: true
     },
     photo:{
         type: String,

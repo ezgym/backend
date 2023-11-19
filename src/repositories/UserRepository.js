@@ -13,7 +13,7 @@ class UserRepository{
         return await User.find();
     }
     async getById(data){
-        return await User.findById(data).populate('subscription');
+        return await User.findById(data);
     }
 
 }

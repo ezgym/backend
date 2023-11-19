@@ -18,6 +18,9 @@ class RoutinesRepository{
     async search(name){
         return await Routines.find({name: {$regex: name, $options: 'i'}});
     }
+    async patch(data){
+        return await Routines.findByIdAndUpdate(data._id, data, {new: true});
+    }
 
 }
 

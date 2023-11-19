@@ -47,6 +47,15 @@ class RoutineController{
             return res.status(400).json({error: err.message});
         }
     }
+    async patch(req , res){
+        try{
+            const routine = await this.repository.patch(req.body);
+            return res.status(200).json(routine);
+        }catch(err){
+            return res.status(400).json({error: err.message});        
+        }
+
+    }
 
 
 }export default RoutineController;
