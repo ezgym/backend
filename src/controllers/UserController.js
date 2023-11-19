@@ -43,7 +43,6 @@ class UserController{
                     message: "Welcome!",
                     token: jwt,
                     id: user._id,
-                    user
                 })
             }
         }catch(error){
